@@ -1,4 +1,4 @@
-import styles from "./Campaings.module.scss";
+import styles from "../Campaings.module.scss";
 // import { WiStars } from "react-icons/wi";
 // import { HiOutlineDocumentRemove } from "react-icons/hi";
 // import { CgArrowsExchangeAlt } from "react-icons/cg";
@@ -11,7 +11,7 @@ import styles from "./Campaings.module.scss";
 
 function regpi(){
   return(
-    <div className="campaign">
+    <div className="regpi">
        <h1 style={{color:"#000",
             fontFamily: "Arial",
             margin: "2rem",

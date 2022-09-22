@@ -84,7 +84,7 @@ const Navbar = () => {
           <NavUrl url="team" icon={<MdPeopleOutline />} description="Patients" />
 
           <NavUrl
-            url="regpi"
+            url="registerpatient"
             icon={<MdOutlineMessage />}
             description="Register patient"
           />
