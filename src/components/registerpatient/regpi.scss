@@ -1,0 +1,226 @@
+.title {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--margin-xs);
+    margin-bottom: var(--margin-md);
+    color: #1e293b;
+
+    @media screen and (max-width: 570px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .title_icon {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        svg {
+            font-size: 3rem;
+        }
+    }
+
+    button {
+        white-space: nowrap;
+        padding: var(--padding-xxs) var(--padding-xs);
+        outline: none;
+        border: none;
+        background: #6366f1;
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 200ms ease-in-out;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        &:hover {
+            background: #4648b4;
+        }
+    }
+
+    svg {
+        font-size: 1.2rem;
+    }
+}
+
+.icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        color: white;
+        font-size: 1.4rem;
+    }
+}
+
+.tag {
+    border-radius: 20px;
+    padding: 3px 10px;
+
+    .tag_title {
+        font-size: 13px;
+        font-weight: 450;
+    }
+}
+
+.card_container {
+    -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    background: white;
+    color: #1e293b;
+    padding: 1rem;
+
+    .icon {
+        margin-bottom: 0.5rem;
+    }
+
+    .card_title {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: var(--margin-xxs);
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: var(--margin-sm);
+    }
+
+    h4 {
+        color: #64748b;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .view_more {
+        display: flex;
+        justify-content: space-between;
+
+        svg {
+            transition: transform 200ms ease-in-out;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #6366f1;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &:hover svg {
+                transform: translateX(2px);
+            }
+        }
+    }
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // grid-template-columns: 1fr 1fr 1fr;
+    margin: 7vh;
+    flex-direction: column;
+
+}
+
+input{
+    width: 20rem;
+    height: 2.5rem;
+    // font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: #1e293b;
+    margin: 2rem;
+    border-radius: 1px solid grey;
+}
+
+
+.cards_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    @media screen and (max-width: 470px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.page_number {
+    margin-top: 1.2rem;
+
+    .active_page {
+        color: rgb(69, 65, 187);
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+
+        li {
+            background: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .back {
+            margin-right: 0.5rem;
+            cursor: not-allowed;
+            svg {
+                color: lightgray;
+            }
+        }
+
+        .fw {
+            margin-left: 0.5rem;
+        }
+
+        .page,
+        .fw {
+            &:hover {
+                background: rgb(85, 79, 232);
+            }
+
+            &:hover span {
+                color: whitesmoke;
+            }
+
+            &:hover svg {
+                color: whitesmoke;
+            }
+        }
+    }
+}

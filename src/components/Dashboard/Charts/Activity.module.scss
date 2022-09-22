@@ -1,0 +1,101 @@
+.container {
+    background: white;
+    padding: 1rem;
+    height: 100%;
+    margin-bottom: auto;
+    -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+}
+
+.title {
+    border-bottom: 1px solid rgb(216, 216, 216);
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        padding-left: 0.5rem;
+    }
+}
+
+.activity_day {
+    color: #94a3b8;
+    font-weight: 500;
+    font-size: 0.9rem;
+    background: rgb(241, 241, 241);
+    margin: 1rem 0;
+    padding: 0.3rem 0;
+    padding-left: 1rem;
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.activity {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    .icon {
+        background: rgb(42, 170, 85);
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 550px) {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        svg {
+            color: white;
+            font-size: 1.4rem;
+
+            @media screen and (max-width: 550px) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .content {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 0.5rem;
+        font-size: 1rem;
+        @media screen and (max-width: 550px) {
+            font-size: 0.8rem;
+        }
+
+        .view {
+            color: rgb(85, 79, 232);
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            &:hover svg {
+                transform: translateX(2px);
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                gap: 0.2rem;
+            }
+
+            svg {
+                transition: all ease-in-out 200ms;
+            }
+        }
+    }
+}

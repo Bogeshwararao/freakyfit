@@ -1,0 +1,102 @@
+@use "./Icons";
+
+.search {
+    position: relative;
+}
+
+.submenu_container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -10;
+}
+
+.submenu_container_active {
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.2);
+    pointer-events: auto;
+}
+
+.submenu {
+    background: white;
+    -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    border-radius: 5px;
+    opacity: 0;
+    padding-block: 0.7rem 0;
+
+    & > * {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .input {
+        display: flex;
+        align-items: center;
+        padding-bottom: 8px;
+        border-bottom: 1px solid lightgray;
+        input {
+            color: rgb(34, 34, 34);
+            outline: none;
+            border: none;
+            width: 500px;
+            padding-left: 10px;
+            font-size: 1rem;
+            @media screen and (max-width: 550px) {
+                width: 82vw;
+            }
+        }
+        svg {
+            color: rgb(160, 160, 160);
+            font-size: 1.1rem;
+        }
+    }
+
+    .recent {
+        h3 {
+            margin-block: 0.8rem;
+            font-size: 11px;
+            font-weight: 500;
+            color: rgb(145, 144, 144);
+            text-transform: uppercase;
+        }
+    }
+}
+
+.submenu_active {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: all ease-in-out 200ms;
+}
+
+.recent_search {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: rgb(34, 34, 34);
+    padding: 0.2rem;
+    border-radius: 5px;
+    svg {
+        font-size: 1.2rem;
+        color: rgb(145, 144, 144);
+    }
+
+    &:hover {
+        background: #6366f1;
+        color: whitesmoke;
+
+        svg {
+            color: whitesmoke;
+        }
+    }
+}

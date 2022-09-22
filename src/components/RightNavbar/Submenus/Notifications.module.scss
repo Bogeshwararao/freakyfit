@@ -1,0 +1,92 @@
+@use "./Icons" as *;
+
+.notifications_container {
+    position: relative;
+    .submenu {
+        position: absolute;
+        right: -3rem;
+        bottom: -0.5rem;
+        transform: translateY(95%);
+        background: white;
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
+        pointer-events: none;
+        opacity: 0;
+        transition: all ease-in-out 300ms;
+
+        @media screen and (max-width: 600px) {
+            right: 60%;
+            transform: translateY(95%) translateX(60%);
+        }
+
+        @media screen and (max-width: 420px) {
+            right: -2rem;
+        }
+
+        .title {
+            font-size: 0.9rem;
+            color: rgb(184, 184, 184);
+            font-weight: 450;
+            margin: var(--margin-xxs) 0;
+            padding-left: 0.8rem;
+        }
+
+        .notifications {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            .notification {
+                transition: background ease-in-out 300ms;
+                padding: 0.2rem 2rem 0.2rem 0.8rem;
+                width: 22rem;
+                @media screen and (max-width: 400px) {
+                    width: 18rem;
+                }
+
+                &:hover {
+                    background: lightgrey;
+                }
+
+                &_title {
+                    font-size: 0.9rem;
+                    font-weight: 550;
+                    white-space: nowrap;
+                    margin-bottom: 3px;
+                }
+
+                p {
+                    font-weight: 400;
+                    font-size: 0.8rem;
+                }
+
+                &_date {
+                    margin-top: var(--margin-xxs);
+                    font-size: 0.7rem;
+                    color: rgb(184, 184, 184);
+                    font-weight: 400;
+                }
+
+                &:last-child {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+
+    .submenu_active {
+        opacity: 1;
+        pointer-events: initial;
+        transform: translateY(100%);
+
+        @media screen and (max-width: 600px) {
+            right: 60%;
+            transform: translateY(100%) translateX(60%);
+        }
+
+        @media screen and (max-width: 420px) {
+            right: -2rem;
+        }
+    }
+}

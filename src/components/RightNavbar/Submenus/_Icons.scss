@@ -1,0 +1,16 @@
+.icon_container {
+    position: relative;
+    background: rgb(241, 245, 249);
+    padding: 0.35rem;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    transition: background 200ms ease;
+    &:hover {
+        background: rgb(202, 202, 202);
+    }
+}
+
+.icon_active {
+    background: rgb(202, 202, 202);
+}

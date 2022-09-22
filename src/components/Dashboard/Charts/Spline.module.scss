@@ -1,0 +1,53 @@
+.chart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    color: rgb(30, 41, 59);
+    -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    padding: var(--padding-sm);
+
+    background: white;
+
+    h2 {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        color: lightgray;
+        font-weight: 400;
+        font-size: 1rem;
+    }
+
+    .sales {
+        display: flex;
+        margin-bottom: var(--margin-xxs);
+        span {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .percentage {
+            color: white;
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            align-self: flex-start;
+            margin-left: var(--margin-xxs);
+        }
+
+        .percentage_green {
+            background: #10b981;
+        }
+
+        .percentage_red {
+            background: red;
+        }
+    }
+}
+
+.canvas_wrapper {
+    height: 150px;
+    margin-top: auto;
+}

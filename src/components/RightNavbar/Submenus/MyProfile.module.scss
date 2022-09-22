@@ -1,0 +1,106 @@
+.avatar_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: var(--margin-sm);
+    z-index: -1;
+
+    &:before {
+        content: "";
+        width: 1px;
+        height: 1.5rem;
+        background: rgb(223, 223, 223);
+        margin-right: var(--margin-xs);
+    }
+
+    //SUBMENU
+    .menu {
+        position: absolute;
+        bottom: -0.5rem;
+        right: 0.5rem;
+        transform: translateY(120%);
+        background: white;
+        padding: var(--padding-xs) var(--padding-lg) var(--padding-xs) var(--padding-xs);
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
+        opacity: 0;
+        pointer-events: none;
+        transition: all ease-in-out 0.3s;
+
+        .info {
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid gainsboro;
+
+            .name {
+                font-size: 1rem;
+                font-weight: 400;
+            }
+
+            .role {
+                font-weight: 400;
+                font-size: 0.7rem;
+                color: rgb(92, 92, 92);
+            }
+        }
+
+        .settings {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 0.8rem;
+            a {
+                text-decoration: none;
+                color: rgba(85, 79, 232, 1);
+                font-size: 0.9rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .menu_active {
+        display: block;
+        pointer-events: initial;
+        opacity: 1;
+        transform: translateY(100%);
+    }
+}
+
+.icon_avatar_container {
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: linear-gradient(50deg, rgba(235, 200, 225, 0.7) 25%, rgba(85, 79, 232, 0.7) 100%);
+
+    svg {
+        transform: translateX(2px);
+    }
+}
+
+.name {
+    display: flex;
+    align-items: center;
+    gap: 0.1rem;
+    cursor: pointer;
+
+    span {
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #475569;
+        @media screen and (max-width: 360px) {
+            display: none;
+        }
+    }
+
+    svg {
+        color: rgb(141, 140, 140);
+        font-size: 1.3rem;
+    }
+}

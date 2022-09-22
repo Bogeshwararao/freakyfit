@@ -1,0 +1,43 @@
+@use "./Submenus/Icons";
+.container {
+    display: flex;
+    align-items: center;
+    padding: var(--padding-sm);
+    border-bottom: 1px solid rgb(211, 211, 211);
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 10;
+    svg {
+        font-size: 1.2rem;
+    }
+}
+h4 {
+    margin-right: 3rem;
+}
+
+.burger_container {
+    display: none;
+    cursor: pointer;
+    padding: 0.2rem;
+
+    @media screen and (max-width: 1024px) {
+        display: flex;
+    }
+
+    svg {
+        font-size: 1.8rem;
+    }
+}
+
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 0.5rem;
+
+    @media screen and (max-width: 360px) {
+        justify-content: flex-start;
+        margin-left: 1rem;
+    }
+}

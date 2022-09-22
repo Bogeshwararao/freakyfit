@@ -1,0 +1,30 @@
+.chart {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    padding: var(--padding-sm);
+    -webkit-box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.22);
+    background: white;
+}
+
+.title {
+    h2 {
+        font-weight: 500;
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-weight: 500;
+        font-size: 1.8rem;
+        margin-top: var(--margin-xs);
+        margin-bottom: var(--margin-xxs);
+    }
+}
+
+.canvas_wrapper {
+    height: 300px;
+    width: 100%;
+    margin-top: auto;
+}

@@ -1,0 +1,52 @@
+@use "./Icons" as *;
+
+.support {
+    position: relative;
+
+    //SUBMENU
+    .submenu {
+        position: absolute;
+        bottom: -0.5rem;
+        right: -2rem;
+        transform: translateY(120%);
+        background: white;
+        padding: var(--padding-xs) var(--padding-lg) var(--padding-xs) var(--padding-xs);
+        border-radius: 5px;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
+        box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.24);
+        opacity: 0;
+        pointer-events: none;
+        transition: all ease-in-out 300ms;
+        .title {
+            display: block;
+            margin-bottom: var(--margin-xxs);
+            color: lightgray;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            color: rgba(85, 79, 232, 0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 3px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        svg {
+            font-size: 1rem;
+        }
+    }
+
+    .submenu_active {
+        opacity: 1;
+        pointer-events: initial;
+        transform: translateY(100%);
+    }
+}
