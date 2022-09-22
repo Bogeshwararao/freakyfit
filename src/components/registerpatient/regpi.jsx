@@ -15,15 +15,24 @@ function regpi(){
        <h1 style={{color:"#000",
             fontFamily: "Arial",
             margin: "2rem",
-          }}>Enter Donor Details</h1>
+          }}>Enter Patient Details</h1>
       <form>
+      <h2 style={{color:"#fff"}}>Enter medical ID</h2>
+       <input type="text" placeholder="Medical ID" />
+       <h2 style={{color:"#fff"}}>Enter Patient Name</h2>
+
         <input type="text" placeholder="Patient Name" />
-        <input type="text" placeholder="Age" />
+        <h2 style={{color:"#fff"}}>Enter medical ID</h2>
+
+        <input type="number" placeholder="Age" />
+        <h2 style={{color:"#fff"}}>Enter Age</h2>
+
         <input type="text" placeholder="Organ" />
+        <h2 style={{color:"#fff"}}>Enter Organ Type</h2>
+
         <input type="text" placeholder="Blood Group" />
 
-
-        <input type="submit" />
+         <button><strong>Submit</strong></button>
 
       </form>
     </div>
