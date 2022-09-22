@@ -19,7 +19,7 @@ function regpi(){
       <form>
       <h2 style={{color:"#fff"}}>Enter medical ID</h2>
        <input type="text" placeholder="Medical ID" />
-       <h2 style={{color:"#fff"}}>Enter Patient Name</h2>
+       <h2 style={{color:"#fff"}}>Enter patient Name</h2>
 
         <input type="text" placeholder="Patient Name" />
         <h2 style={{color:"#fff"}}>Enter medical ID</h2>
