@@ -1,6 +1,6 @@
 //STYLES
 import styles from "./Navbar.module.scss";
-
+import regpi from '../Registerpatient/Regpi';
 //CONTEXT
 import { useContext } from "react";
 import NavContext from "../../Context/NavContext";
@@ -84,7 +84,7 @@ const Navbar = () => {
           <NavUrl url="team" icon={<MdPeopleOutline />} description="Patients" />
 
           <NavUrl
-            url="registerpatient"
+            url="Registerpatient"
             icon={<MdOutlineMessage />}
             description="Register patient"
           />

@@ -1,4 +1,4 @@
-import styles from "../Campaings.module.scss";
+import styles from "../Campaigns/Campaings.module.scss";
 // import { WiStars } from "react-icons/wi";
 // import { HiOutlineDocumentRemove } from "react-icons/hi";
 // import { CgArrowsExchangeAlt } from "react-icons/cg";
@@ -6,7 +6,7 @@ import styles from "../Campaings.module.scss";
 // import { BsArrowRight } from "react-icons/bs";
 // import { GoPlus } from "react-icons/go";
 // import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
-
+// import regpi from '..'
 
 
 function regpi(){

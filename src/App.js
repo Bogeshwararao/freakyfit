@@ -8,7 +8,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 // import Analytics from "./components/Analytics/Analytics";
 import Campaings from "./components/Campaigns/Campaings";
 import Team from "./components/Team/Team";
-
+import Regpi from "./components/Registerpatient/Regpi";
 import NavContext from "./Context/NavContext";
 function App() {
   const [nav, setNav] = useState(false);
@@ -27,7 +27,7 @@ function App() {
               {/* <Route path="/analytics" element={<Analytics />} /> */}
               <Route path="/campaings" element={<Campaings />} />
               <Route path="/team" element={<Team />} />
-              <Route path="/messages" element={<main>Messages</main>} />
+              <Route path="/Registerpatient" element={<Regpi />} />
             </Routes>
           }
         />
